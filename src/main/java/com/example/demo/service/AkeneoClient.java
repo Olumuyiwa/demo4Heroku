@@ -173,7 +173,7 @@ public class AkeneoClient {
             for (int i = 0; i < items.size(); i++) {
                 ObjectNode item = (ObjectNode) items.get(i);
                 ReferenceEntity referenceEntity = mapper.convertValue(item, ReferenceEntity.class);
-                referenceEntity.setReferenceDataName(referenceEntityCode); //TODO should not be needed
+                referenceEntity.setCode(referenceEntityCode); //TODO should not be needed
                 referenceEntities.add(referenceEntity);
             }
             if (responseBody.get("_links").has("next")) {

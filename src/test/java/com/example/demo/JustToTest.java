@@ -41,8 +41,7 @@ import static org.junit.Assert.*;
 
 @Slf4j
 public class JustToTest {
-
-
+//com/boohoo/esbdefused/test/acceptance/purchaseorderprocessor/inputs/ordering-app/purchase-order-pim-existing-product.json
     String INPUT_LOCATION =                   "C:\\my-folder\\src-code\\play\\java\\boohoo\\acceptance-tests\\src\\test\\resources\\com\\boohoo\\esbdefused\\test\\acceptance\\purchaseorderprocessor\\inputs\\ordering-app\\";
     String OUTPUT_LOCATION =                  "C:\\my-folder\\src-code\\play\\java\\boohoo\\acceptance-tests\\src\\test\\resources\\com\\boohoo\\esbdefused\\test\\acceptance\\purchaseorderprocessor\\expected-outputs\\ordering-app\\";
     String OUTPUTS_ACCOUNTING_RECEIPTS_DIR =  "C:\\my-folder\\src-code\\play\\java\\boohoo\\acceptance-tests\\src\\test\\resources\\com\\boohoo\\esbdefused\\test\\acceptance\\purchaseorderprocessor\\expected-outputs\\accounting-receipts\\";
@@ -57,18 +56,17 @@ public class JustToTest {
         objectMapper.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);
         return objectMapper;
     }
-    public String getContentOfFile( String fileApth) throws Exception{
+    public static String getContentOfFile( String fileApth) throws IOException{
         File file = new File(fileApth);
         return FileUtils.readFileToString(file, "UTF-8");
 
     }
-    private void compareFilesWithQueueMessages(String queueName, List<String> purchaseOrderIds, String outputDirectory) throws Exception {
+    public void compareFilesWithQueueMessages(String queueName, List<String> purchaseOrderIds, String outputDirectory) throws Exception {
         List<String> actualMessages = SqsUtils.getMessages(queueName, purchaseOrderIds.size(), 15);
         Collections.sort(actualMessages);
         System.out.println("purchaseOrderIds.size()- = " + purchaseOrderIds.size());
         System.out.println("actualMessages.size()- = " + actualMessages.size());
         System.out.println("queueName = " + queueName);
-
 
         Iterator<String> actualMessagesIterator = actualMessages.iterator();
 
@@ -85,13 +83,12 @@ public class JustToTest {
             }
         }
     }
-    private void compareFilesWithQueueMessages2(String queueName, List<String> purchaseOrderIds, String outputDirectory) throws Exception {
+    public void compareFilesWithQueueMessages2(String queueName, List<String> purchaseOrderIds, String outputDirectory) throws Exception {
         List<String> actualMessages = SqsUtils.getMessages(queueName, purchaseOrderIds.size(), 15);
         Collections.sort(actualMessages);
         System.out.println("purchaseOrderIds.size()- = " + purchaseOrderIds.size());
         System.out.println("actualMessages.size()- = " + actualMessages.size());
         System.out.println("queueName = " + queueName);
-
 
         Iterator<String> actualMessagesIterator = actualMessages.iterator();
 
@@ -204,6 +201,32 @@ And a business alert with subject: "PO containing invalid Buyer Name Alert" shou
         System.out.println("actualPurchaseOrder - " +actualObject);
         Assertions.assertEquals(expected, actualObject);
     }
+    //£££###
+/*    Scenario: Purchase Order Creation with mix of existing/non-existing products
+    When_anew_purchase_order_is_received_from_ordering_app
+            Then_the_purchase_ordershould_be_sent_to_accounting_queue
+    And_the_purchase_order_receipt_should_be_sent_to_ordering_app_queue*/
+    void scenarioPurchaseOrderCreationWithMixOfExistingNonExistingProducts() throws Exception {
+// When a purchase order "purchase-order-pim-existing-product" is received from ordering app
+// StepDefs.a_purchase_order_is_received_from_ordering_app(String)
+        String myQueuePrifix = "dev-israel";
+        String uatQueuePrifix = "uat";
+        String fileName = "purchase-order-pim-new-product";
+        System.out.println("inside a_purchase_order_is_received_from_ordering_app " + fileName);
+        String OUTPUTS_ORDERINGAPP_PO_DIR = OUTPUT_LOCATION;
+        String inputFilePath = INPUT_LOCATION+ ("purchase-order-pim-new-product.json");
+        System.out.println("fileName = " + fileName);
+        System.out.println("inputFilePath = " + inputFilePath);
+        String jsonOfInput = getContentOfFile(inputFilePath);
+        System.out.println("input string = " + jsonOfInput);
+        String outputFilePath = OUTPUT_LOCATION + ("purchase-order-pim-existing-product");
+        InputStream targetStream = new FileInputStream(new File( inputFilePath));
+        SqsUtils.sendMessage(IOUtils.toString(targetStream, StandardCharsets.UTF_8),QueueNames.CREATE_PO_FROM_BUYER_APP);
+        System.out.println("QueueNames.PO_PIM_PO_TO_ACCOUNTING " + QueueNames.PO_PIM_PO_TO_ACCOUNTING); //QueueNames.PO_PIM_PO_TO_ACCOUNTING " - dev-israel-send-pim-purchase-order-to-accounting
+
+        compareFilesWithQueueMessages(QueueNames.PO_PIM_PO_TO_ACCOUNTING, Collections.singletonList(fileName), OUTPUTS_ORDERINGAPP_PO_DIR);
+    }
+
     void test_purchase_order_pim_existing_product() throws Exception {
 // When a purchase order "purchase-order-pim-existing-product" is received from ordering app
 // StepDefs.a_purchase_order_is_received_from_ordering_app(String)
@@ -227,7 +250,7 @@ And a business alert with subject: "PO containing invalid Buyer Name Alert" shou
     public static void main(String[] args) throws  Exception {
         JustToTest justToTest = new JustToTest();
 //        justToTest.testpurchase_order_012345();
-        justToTest.rebuyPurchase0rderCreationWithAstylethatdoesnotexist();
+        justToTest.scenarioPurchaseOrderCreationWithMixOfExistingNonExistingProducts();
 //        justToTest.purchase_order_received_from_accounting_with_an_invalid_buyer_name();
     }
 

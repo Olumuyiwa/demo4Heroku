@@ -1,0 +1,255 @@
+{
+	"IsPIM": true,
+	"UniqueKey": "6309000093304581",
+	"Originator": "daniel.ruxton",
+	"Buyer": "Daniel Ruxton",
+	"SupplierCode": "ILE001",
+	"SupplierOrderNumber": "IF62386270 1 1",
+	"CurrencyCode": "GBP",
+	"ExFactoryDate": "2022-03-15T00:00:00.000Z",
+	"DeliveryDate": "2022-03-28T00:00:00.000Z",
+	"FreightMethod": "Road",
+	"Season": "aw21",
+	"CountryOfOrigin": "TR",
+	"PortOfLoading": "TRIST",
+	"IncoTerms": "FOB",
+	"OrderType": "New",
+	"FactoryCode": "TEKSP",
+	"Wholesaleable": false,
+	"ImageReferences": ["1647864727355.jpg"],
+	"ProductModels": [
+		{
+			"StyleCode": null,
+			"StyleKey": "62386b9726e4ae003495ca47",
+			"Name": "Israel-test-2 1 1",
+			"CountryOfOrigin": { "Code": "TR", "Label": "Turkey" },
+			"ProductGroup": { "Code": "bhdenimdresses", "Label": "Denim Dresses" },
+			"ProductTeam": { "Code": "bhdenim", "Label": "Denim" },
+			"Family": { "Code": "womens_dresses", "Label": "Womens Dresses" },
+			"Style": { "Code": "maxidress", "Label": "Maxi Dress" },
+			"Brand": { "Code": "boohoo", "Label": "boohoo" },
+			"SupplierStockCode": "IF62386270 1 1",
+			"HangingGarment": false,
+			"Taxonomy": {
+				"occasion": { "Code": "workwear", "Label": "Workwear" },
+				"gender": { "Code": "male", "Label": "Male" },
+				"design_clothing": { "Code": "abstract", "Label": "Abstract" },
+				"detail_clothing": { "Code": "3d", "Label": "3D" },
+				"fabrication": { "Code": "leather", "Label": "Leather" },
+				"season": { "Code": "aw21", "Label": "AW21" },
+				"phase": { "Code": "fashion", "Label": "Fashion" },
+				"origin": { "Code": "boughtdesign", "Label": "Bought Design" },
+				"stockpath": { "Code": "fitted", "Label": "Fitted" },
+				"trend": { "Code": "americana", "Label": "Americana" },
+				"enduse": { "Code": "10castops", "Label": "£10 Cas Tops" },
+				"sustainabilitydetail": {
+					"Code": "organiccotton",
+					"Label": "Organic Cotton"
+				},
+				"newness": { "Code": "basics", "Label": "Basics" },
+				"hangingstorage": { "Code": true, "Label": "Yes" },
+				"notes": { "Code": "casual", "Label": "Casual" },
+				"risk_fur": { "Code": false, "Label": "No" },
+				"risk_prop65": { "Code": false, "Label": "No" },
+				"range_womens": { "Code": "main", "Label": "Main" },
+				"length_skirts": { "Code": "maxi", "Label": "Maxi" },
+				"neckline_womens": { "Code": "buttonup", "Label": "Button Up" },
+				"sleevelength": { "Code": "longsleeve", "Label": "Long Sleeve" }
+			}
+		}
+	],
+	"Lines": [
+		{
+			"ID": "62386b9726e4ae003495ca49",
+			"StyleCode": null,
+			"StyleKey": "62386b9726e4ae003495ca47",
+			"Item": {
+				"Size": { "Label": "6", "Code": "14" },
+				"Colour": { "Label": "Charcoal", "Code": "115" }
+			},
+			"CostPrice": 10,
+			"SellingPrice": 20,
+			"OfferPrice": null,
+			"Quantity": 1,
+			"MinimumOrderQuantity": null,
+			"CostThresholds": [],
+			"FabricationDetail": "Clothing"
+		},
+		{
+			"ID": "62386b9726e4ae003495ca4a",
+			"StyleCode": null,
+			"StyleKey": "62386b9726e4ae003495ca47",
+			"Item": {
+				"Size": { "Label": "8", "Code": "16" },
+				"Colour": { "Label": "Charcoal", "Code": "115" }
+			},
+			"CostPrice": 10,
+			"SellingPrice": 20,
+			"OfferPrice": null,
+			"Quantity": 1,
+			"MinimumOrderQuantity": null,
+			"CostThresholds": [],
+			"FabricationDetail": "Clothing"
+		},
+		{
+			"ID": "62386b9726e4ae003495ca4b",
+			"StyleCode": null,
+			"StyleKey": "62386b9726e4ae003495ca47",
+			"Item": {
+				"Size": { "Label": "10", "Code": "18" },
+				"Colour": { "Label": "Charcoal", "Code": "115" }
+			},
+			"CostPrice": 10,
+			"SellingPrice": 20,
+			"OfferPrice": null,
+			"Quantity": 2,
+			"MinimumOrderQuantity": null,
+			"CostThresholds": [],
+			"FabricationDetail": "Clothing"
+		},
+		{
+			"ID": "62386b9726e4ae003495ca4c",
+			"StyleCode": null,
+			"StyleKey": "62386b9726e4ae003495ca47",
+			"Item": {
+				"Size": { "Label": "12", "Code": "20" },
+				"Colour": { "Label": "Charcoal", "Code": "115" }
+			},
+			"CostPrice": 10,
+			"SellingPrice": 20,
+			"OfferPrice": null,
+			"Quantity": 2,
+			"MinimumOrderQuantity": null,
+			"CostThresholds": [],
+			"FabricationDetail": "Clothing"
+		},
+		{
+			"ID": "62386b9726e4ae003495ca4d",
+			"StyleCode": null,
+			"StyleKey": "62386b9726e4ae003495ca47",
+			"Item": {
+				"Size": { "Label": "14", "Code": "22" },
+				"Colour": { "Label": "Charcoal", "Code": "115" }
+			},
+			"CostPrice": 10,
+			"SellingPrice": 20,
+			"OfferPrice": null,
+			"Quantity": 2,
+			"MinimumOrderQuantity": null,
+			"CostThresholds": [],
+			"FabricationDetail": "Clothing"
+		},
+		{
+			"ID": "62386b9726e4ae003495ca4e",
+			"StyleCode": null,
+			"StyleKey": "62386b9726e4ae003495ca47",
+			"Item": {
+				"Size": { "Label": "16", "Code": "24" },
+				"Colour": { "Label": "Charcoal", "Code": "115" }
+			},
+			"CostPrice": 10,
+			"SellingPrice": 20,
+			"OfferPrice": null,
+			"Quantity": 1,
+			"MinimumOrderQuantity": null,
+			"CostThresholds": [],
+			"FabricationDetail": "Clothing"
+		},
+		{
+			"ID": "62386b9726e4ae003495ca4f",
+			"StyleCode": null,
+			"StyleKey": "62386b9726e4ae003495ca47",
+			"Item": {
+				"Size": { "Label": "6", "Code": "14" },
+				"Colour": { "Label": "Butter", "Code": "110" }
+			},
+			"CostPrice": 10,
+			"SellingPrice": 20,
+			"OfferPrice": null,
+			"Quantity": 1,
+			"MinimumOrderQuantity": null,
+			"CostThresholds": [],
+			"FabricationDetail": "Clothing"
+		},
+		{
+			"ID": "62386b9726e4ae003495ca50",
+			"StyleCode": null,
+			"StyleKey": "62386b9726e4ae003495ca47",
+			"Item": {
+				"Size": { "Label": "8", "Code": "16" },
+				"Colour": { "Label": "Butter", "Code": "110" }
+			},
+			"CostPrice": 10,
+			"SellingPrice": 20,
+			"OfferPrice": null,
+			"Quantity": 1,
+			"MinimumOrderQuantity": null,
+			"CostThresholds": [],
+			"FabricationDetail": "Clothing"
+		},
+		{
+			"ID": "62386b9726e4ae003495ca51",
+			"StyleCode": null,
+			"StyleKey": "62386b9726e4ae003495ca47",
+			"Item": {
+				"Size": { "Label": "10", "Code": "18" },
+				"Colour": { "Label": "Butter", "Code": "110" }
+			},
+			"CostPrice": 10,
+			"SellingPrice": 20,
+			"OfferPrice": null,
+			"Quantity": 2,
+			"MinimumOrderQuantity": null,
+			"CostThresholds": [],
+			"FabricationDetail": "Clothing"
+		},
+		{
+			"ID": "62386b9726e4ae003495ca52",
+			"StyleCode": null,
+			"StyleKey": "62386b9726e4ae003495ca47",
+			"Item": {
+				"Size": { "Label": "12", "Code": "20" },
+				"Colour": { "Label": "Butter", "Code": "110" }
+			},
+			"CostPrice": 10,
+			"SellingPrice": 20,
+			"OfferPrice": null,
+			"Quantity": 2,
+			"MinimumOrderQuantity": null,
+			"CostThresholds": [],
+			"FabricationDetail": "Clothing"
+		},
+		{
+			"ID": "62386b9726e4ae003495ca53",
+			"StyleCode": null,
+			"StyleKey": "62386b9726e4ae003495ca47",
+			"Item": {
+				"Size": { "Label": "14", "Code": "22" },
+				"Colour": { "Label": "Butter", "Code": "110" }
+			},
+			"CostPrice": 10,
+			"SellingPrice": 20,
+			"OfferPrice": null,
+			"Quantity": 2,
+			"MinimumOrderQuantity": null,
+			"CostThresholds": [],
+			"FabricationDetail": "Clothing"
+		},
+		{
+			"ID": "62386b9726e4ae003495ca54",
+			"StyleCode": null,
+			"StyleKey": "62386b9726e4ae003495ca47",
+			"Item": {
+				"Size": { "Label": "16", "Code": "24" },
+				"Colour": { "Label": "Butter", "Code": "110" }
+			},
+			"CostPrice": 10,
+			"SellingPrice": 20,
+			"OfferPrice": null,
+			"Quantity": 1,
+			"MinimumOrderQuantity": null,
+			"CostThresholds": [],
+			"FabricationDetail": "Clothing"
+		}
+	]
+}

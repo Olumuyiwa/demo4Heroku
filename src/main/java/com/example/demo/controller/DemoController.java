@@ -30,7 +30,7 @@ public class DemoController  {
                 PimClientService
                 ( "https://boohoo-staging.cloud.akeneo.com","4_9gapgezkqecko0gk8o80s4kc80cocw88c8wksg8oc8sk0ss4c",
                         "5rtac72h978c4w4cko0k8k0wg0oskksw0wwo08k4o4wkos08w8","apiuser_5749","f555ce2f3" );
-        HttpHeaders httpHeaders =  pimClientService.getHeaders();
-        AccessToken accessToken = pimClientService.fetchToken();
+//        HttpHeaders httpHeaders =  pimClientService.getHeaders();
+//        AccessToken accessToken = pimClientService.fetchToken();
     }
 }
